@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure The Vault</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="block7workshop.css">
+    <!--alerts will pop up when user first goes to the page-->
+    <script>alert('You have received this message because you have been chosen to open an important vault. Here is the secret combination')</script>
+    <script>alert('5 + 5')</script>
+    <script>alert('20 * 2')</script>
+    <script>alert('45 - 6')</script>
+    <!--pop 
+        
+        up box will display instructions as how to solve the vault code-->
+    <style>
+        .box {
+            background-color: lightblue;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 17px;
+            align-items: center;
+        }
+
+        .box a {
+            display: inline-block;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 3px;
+        }
+
+        .modal {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(254, 126, 126, 0.7);
+            transition: all 0.4s;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .content {
+            position: absolute;
+            background: white;
+            width: 400px;
+            padding: 1em 2em;
+            border-radius: 4px;
+        }
+
+        .modal:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .box-close {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            color: #fe0606;
+            text-decoration: none;
+            font-size: 30px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="box">
+            <!--A link is inserted for the user to click to get to the popup box instructions-->
+            <a href="#popup-box">
+                Click to Open Popup Box !
+            </a>
+        </div>
+        <div id="popup-box" class="modal">
+            <div class="content">
+                <!--Once box is clicked, a new pop up box will appear telling the user how to solve the codes.-->
+                <h1 style="color: lightgreen;">
+                    There are three arithmetic equations you must solve to retrieve the vault code! The equations are
+                    the three popups.
+                </h1>
+
+                <a href="#" class="box-close">
+                    ×
+                </a>
+            </div>
+        </div>
+        </style>
+    </body>
+
+</html>
